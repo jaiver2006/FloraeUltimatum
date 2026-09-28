@@ -22,9 +22,11 @@ class GardenController extends Controller
     // Crea una nueva area con los datos recibidos desde la API.
     public function store(Request $request)
     {
-        // Valida que el nombre exista, sea texto y no supere 255 caracteres.
+        // Valida los campos que puede guardar el modelo garden.
         $data = $request->validate([
-            'name' => ['required', 'string', 'max:255'],
+            'plant_classification' => ['required', 'string', 'max:255'],
+            'plant_quantity' => ['required', 'integer', 'min:1'],
+            'creation_date' => ['sometimes', 'date'],
         ]);
 
         // Guarda el registro usando los campos permitidos por el modelo.
@@ -44,9 +46,10 @@ class GardenController extends Controller
     // Actualiza una area existente con los datos enviados por la API.
     public function update(Request $request, garden $garden)
     {
-        // Valida nuevamente el nombre antes de modificar el registro.
         $data = $request->validate([
-            'name' => ['required', 'string', 'max:255'],
+            'plant_classification' => ['sometimes', 'required', 'string', 'max:255'],
+            'plant_quantity' => ['sometimes', 'required', 'integer', 'min:1'],
+            'creation_date' => ['sometimes', 'date'],
         ]);
 
         // Actualiza solamente los campos validados.
