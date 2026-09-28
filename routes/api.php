@@ -43,7 +43,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 // Cada apiResource crea automáticamente index, store, show, update y destroy.
-// Cada apiResource crea las rutas index, store, show, update y destroy.
 Route::apiResource('garden', GardenController::class);
 Route::apiResource('medicine', MedicineController::class);
 Route::apiResource('plant', PlantController::class);
