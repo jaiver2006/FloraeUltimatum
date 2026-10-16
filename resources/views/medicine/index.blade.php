@@ -20,6 +20,8 @@
                         <th>Nombre</th>
                         <th>Tipo</th>
                         <th>Dosis sugerida</th>
+                        <th>medicine_description</th>
+                        <th>instructions</th>
                         <th class="text-center" style="width: 197px; min-width: 197px; max-width: 197px;">Acciones</th>
                     </tr>
                 </thead>
@@ -30,6 +32,9 @@
                             <td>{{ $medicine->medicine_name }}</td>
                             <td>{{ $medicine->medicine_type }}</td>
                             <td>{{ $medicine->suggested_dose }}</td>
+                            <td>{{ $medicine->medicine_description }}</td>
+                            <td>{{ $medicine->instructions }}</td>
+                        
                             <td class="text-center">
                                 <div class="d-flex justify-content-center align-items-center gap-2">
                                     <a href="{{ route('medicine.show', $medicine->id) }}"
@@ -42,17 +47,15 @@
                                         style="width: 40px; height: 30px;">
                                         <i class="bi bi-pencil" style="font-size: 18px"></i>
                                     </a>
-                                    <form action="{{ route('medicine.destroy', $medicine->id) }}" method="POST"
-                                        class="m-0">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit"
-                                            class="btn btn-sm btn-outline-danger d-inline-flex align-items-center justify-content-center"
-                                            style="width: 40px; height: 30px;">
-                                            <i class="bi bi-trash3" style="font-size: 18px"></i>
-                                        </button>
-                                    </form>
-                                </div>
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit"
+                                                    class="btn btn-sm btn-outline-danger d-inline-flex align-items-center justify-content-center"
+                                                    style="width: 40px; height: 30px;">
+                                                    <i class="bi bi-trash3" style="font-size: 18px"></i>
+                                                </button>
+                                            </form>
+                                    </div>
                             </td>
                         </tr>
                     @endforeach
