@@ -19,6 +19,13 @@ return new class extends Migration
             $table->string('status');
             $table->text('description');
 
+            $table->string('duracion');
+
+            $table->string('paso1');
+            $table->string('paso2');
+            $table->string('paso3');
+            $table->string('paso4');
+            
             $table->unsignedBigInteger('plague_id')->nullable();
 
             $table->foreign('plague_id')

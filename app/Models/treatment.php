@@ -15,6 +15,11 @@ class treatment extends Model
         'status',
         'description',
         'plague_id',
+        'duracion',
+        'paso1',
+        'paso2',
+        'paso3',
+        'paso4',
     ];
 
     public function pest_plant()

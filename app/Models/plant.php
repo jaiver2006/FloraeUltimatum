@@ -11,14 +11,18 @@ class plant extends Model
 
     protected $fillable = [
         'common_name',
-        'common2_name',
-        'common3_name',
-        'common4_name',
         'scientific_name',
         'plant_description',
         'origin',
         'type',
         'size',
+        'recomendacion',
+        'clima',
+        'riego',
+        'luz',
+        'temperatura',
+        'fertilizacion',
+        
         'image_plant_id',
     ];
 
@@ -37,10 +41,7 @@ class plant extends Model
         return $this->hasMany(\App\Models\care_record::class);
     }
 
-    public function recommendations()
-    {
-        return $this->hasMany(\App\Models\recommendation::class);
-    }
+
 
     public function warnings()
     {

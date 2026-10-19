@@ -24,4 +24,9 @@ class care_record extends Model
     {
         return $this->belongsTo(\App\Models\plant::class);
     }
+
+    public function calendarios()
+    {
+        return $this->hasMany(\App\Models\calendario::class);
+    }
 }

@@ -24,6 +24,8 @@ return new class extends Migration
 
             $table->text('instructions');
 
+            $table->string('frecuencia');
+
             $table->timestamps();
         });
     }

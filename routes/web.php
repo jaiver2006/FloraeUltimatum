@@ -65,6 +65,15 @@ Route::get('carerecord/{care_record}/edit', [CareRecordController::class, 'edit'
 Route::put('carerecord/{care_record}', [CareRecordController::class, 'update'])->name('carerecord.update');
 Route::delete('carerecord/{care_record}', [CareRecordController::class, 'destroy'])->name('carerecord.destroy');
 
+use App\Http\Controllers\CalendarioController;
+Route::get('calendario/list', [CalendarioController::class, 'index'])->name('calendario.index');
+Route::get('calendario/create', [CalendarioController::class, 'create'])->name('calendario.create');
+Route::get('calendario/{calendario}', [CalendarioController::class, 'show'])->name('calendario.show');
+Route::post('calendario/store', [CalendarioController::class, 'store'])->name('calendario.store');
+Route::get('calendario/{calendario}/edit', [CalendarioController::class, 'edit'])->name('calendario.edit');
+Route::put('calendario/{calendario}', [CalendarioController::class, 'update'])->name('calendario.update');
+Route::delete('calendario/{calendario}', [CalendarioController::class, 'destroy'])->name('calendario.destroy');
+
 use App\Http\Controllers\PlantCareController;
 Route::get('plantcare/list', [PlantCareController::class, 'index'])->name('plantcare.index');
 Route::get('plantcare/create', [PlantCareController::class, 'create'])->name('plantcare.create');
@@ -177,4 +186,3 @@ Route::delete('plague/{plague}', [PlagueController::class, 'destroy'])->name('pl
 Route::get('/', function () {
     return view('welcome');
 });
-

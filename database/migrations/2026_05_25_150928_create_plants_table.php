@@ -15,11 +15,16 @@ return new class extends Migration
             $table->id();
 
             $table->string('common_name');
-            $table->string('common2_name');
-            $table->string('common3_name');
-            $table->string('common4_name');
             $table->string('scientific_name');
             $table->text('plant_description');
+
+            $table->string('recomendacion');
+            $table->string('clima');
+            $table->string('riego');
+            $table->string('luz');
+            $table->string('temperatura');
+            $table->string('fertilizacion');
+
             $table->string('origin');
             $table->string('type');
             $table->string('size');

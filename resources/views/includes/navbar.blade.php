@@ -65,6 +65,11 @@
                 </li>
 
                 <li class="nav-item rounded overflow-hidden">
+                    <a class="nav-link text-white px-3 py-2 {{ request()->is('calendario*') ? 'active' : '' }}"
+                        href="{{ route('calendario.index') }}">Calendario</a>
+                </li>
+
+                <li class="nav-item rounded overflow-hidden">
                     <a class="nav-link text-white px-3 py-2 {{ request()->is('recommendation*') ? 'active' : '' }}"
                         href="{{ route('recommendation.index') }}">Recomendaciones</a>
                 </li>

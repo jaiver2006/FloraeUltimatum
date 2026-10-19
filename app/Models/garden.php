@@ -8,8 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class garden extends Model
 {
     use HasFactory;
-    
-        protected $fillable = [
+
+    protected $fillable = [
         'plant_classification',
         'plant_quantity',
         'creation_date',
@@ -20,9 +20,13 @@ class garden extends Model
         return $this->hasMany(user::class);
     }
 
-public function plants()
-{
-    return $this->belongsToMany(\App\Models\plant::class,'garden_plants','garden_id','plant_id');
-}
-}
+    public function plants()
+    {
+        return $this->belongsToMany(\App\Models\plant::class, 'garden_plants', 'garden_id', 'plant_id');
+    }
 
+    public function calendarios()
+    {
+        return $this->hasMany(\App\Models\calendario::class);
+    }
+}

@@ -15,6 +15,7 @@ class medicine extends Model
         'medicine_description',
         'suggested_dose',
         'instructions',
+        'frecuencia',
     ];
 
     public function treatments()

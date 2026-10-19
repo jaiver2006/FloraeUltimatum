@@ -10,13 +10,15 @@ class plague extends Model
     use HasFactory;
 
     protected $fillable = [
-        'plague_name',
-        'plague2_name',
-        'plague3_name',
+        'nombre_comun',
         'scientific_name',
         'plague_description',
         'plague_symptom',
         'image_plague_id',
+        'sintoma1',
+        'sintoma2',
+        'sintoma3',
+        'sintoma4',
     ];
 
     public function symptoms()

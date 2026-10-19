@@ -15,6 +15,7 @@ use App\Http\Controllers\Api\MedicationTreatmentController;
 use App\Http\Controllers\Api\WarningController;
 use App\Http\Controllers\Api\RecommendationController;
 use App\Http\Controllers\Api\CareRecordController;
+use App\Http\Controllers\Api\CalendarioController;
 use App\Http\Controllers\Api\PlantCareController;
 use App\Http\Controllers\Api\PestPlantController;
 use App\Http\Controllers\Api\PlagueSymptomController;
@@ -57,6 +58,7 @@ Route::apiResource('recommendation', RecommendationController::class);
 Route::apiResource('carerecord', CareRecordController::class)
     // Ajusta el parámetro para que coincida con el modelo care_record.
     ->parameters(['carerecord' => 'care_record']);
+Route::apiResource('calendario', CalendarioController::class);
 Route::apiResource('plantcare', PlantCareController::class);
 Route::apiResource('pestplant', PestPlantController::class);
 Route::apiResource('plaguesymptom', PlagueSymptomController::class);

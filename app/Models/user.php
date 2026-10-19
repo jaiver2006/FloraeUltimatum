@@ -18,6 +18,8 @@ class user extends Authenticatable
         'email',
         'password',
         'role',
+        'telephone',
+        'fecha_nacimiento',
         'garden_id'
     ];
 

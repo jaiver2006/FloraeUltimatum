@@ -11,19 +11,27 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('recommendations', function (Blueprint $table) {
+        Schema::create('calendarios', function (Blueprint $table) {
             $table->id();
 
-            $table->string('recommendation1');
-            $table->string('recommendation2')->nullable();
 
-            $table->unsignedBigInteger('plant_id')->nullable();
 
-            $table->foreign('plant_id')
+
+            $table->unsignedBigInteger('care_record_id')->nullable();
+
+            $table->foreign('care_record_id')
                 ->references('id')
-                ->on('plants')
+                ->on('care_records')
                 ->nullOnDelete();
 
+
+
+            $table->unsignedBigInteger('garden_id')->nullable();
+
+            $table->foreign('garden_id')
+                ->references('id')
+                ->on('gardens')
+                ->nullOnDelete();
             $table->timestamps();
         });
     }
@@ -33,6 +41,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('recommendations');
+        Schema::dropIfExists('calendarios');
     }
 };

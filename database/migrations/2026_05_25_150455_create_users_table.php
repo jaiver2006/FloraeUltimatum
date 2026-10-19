@@ -19,6 +19,9 @@ return new class extends Migration
             $table->string('role');
             $table->string('first_lastname');
 
+            $table->string('telephone')->nullable();
+            $table->string('fecha_nacimiento')->nullable();
+
             $table->string('second_lastname')->nullable();
 
             $table->string('email')->unique();
