@@ -23,9 +23,7 @@
                     <h5 class="text-secondary border-bottom pb-2 mb-4">Información de la plaga</h5>
                     <div class="row g-4">
                         @foreach ([
-            'plague_name' => 'Nombre de la plaga',
-            'plague2_name' => 'Segundo nombre de la plaga',
-            'plague3_name' => 'Tercer nombre de la plaga',
+            'plague_name' => 'Nombre común',
             'scientific_name' => 'Nombre científico',
         ] as $field => $label)
                             <div class="col-md-6">

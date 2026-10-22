@@ -17,11 +17,9 @@ class PlagueController extends Controller
 
     public function store(Request $request)
     {
-        // Valida los nombres, descripción, síntomas y la imagen opcional.
+        // Valida los campos del esquema de plagas y la imagen opcional.
         $data = $request->validate([
             'plague_name' => ['required', 'string', 'max:255'],
-            'plague2_name' => ['required', 'string', 'max:255'],
-            'plague3_name' => ['required', 'string', 'max:255'],
             'scientific_name' => ['required', 'string', 'max:255'],
             'plague_description' => ['required', 'string'],
             'plague_symptom' => ['required', 'string'],
@@ -40,8 +38,6 @@ class PlagueController extends Controller
     {
         $data = $request->validate([
             'plague_name' => ['sometimes', 'required', 'string', 'max:255'],
-            'plague2_name' => ['sometimes', 'required', 'string', 'max:255'],
-            'plague3_name' => ['sometimes', 'required', 'string', 'max:255'],
             'scientific_name' => ['sometimes', 'required', 'string', 'max:255'],
             'plague_description' => ['sometimes', 'required', 'string'],
             'plague_symptom' => ['sometimes', 'required', 'string'],

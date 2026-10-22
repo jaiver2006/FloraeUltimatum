@@ -35,11 +35,6 @@
                 </li>
 
                 <li class="nav-item rounded overflow-hidden">
-                    <a class="nav-link text-white px-3 py-2 {{ request()->is('symptom*') ? 'active' : '' }}"
-                        href="{{ route('symptom.index') }}">Síntomas</a>
-                </li>
-
-                <li class="nav-item rounded overflow-hidden">
                     <a class="nav-link text-white px-3 py-2 {{ request()->is('medicine*') ? 'active' : '' }}"
                         href="{{ route('medicine.index') }}">Medicinas</a>
                 </li>
@@ -107,11 +102,6 @@
                 <li class="nav-item rounded overflow-hidden">
                     <a class="nav-link text-white px-3 py-2 {{ request()->is('pestplant*') ? 'active' : '' }}"
                         href="{{ route('pestplant.index') }}">Plagas de plantas</a>
-                </li>
-
-                <li class="nav-item rounded overflow-hidden">
-                    <a class="nav-link text-white px-3 py-2 {{ request()->is('plaguesymptom*') ? 'active' : '' }}"
-                        href="{{ route('plaguesymptom.index') }}">Síntomas de plagas</a>
                 </li>
 
                 <li class="nav-item rounded overflow-hidden">

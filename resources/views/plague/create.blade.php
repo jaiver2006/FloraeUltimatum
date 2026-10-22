@@ -12,7 +12,7 @@
                         <form action="{{ route('plague.store') }}" method="POST">
                             @csrf
 
-                            @foreach (['plague_name' => 'Nombre de la plaga', 'plague2_name' => 'Segundo nombre de la plaga', 'plague3_name' => 'Tercer nombre de la plaga', 'scientific_name' => 'Nombre científico'] as $field => $label)
+                            @foreach (['plague_name' => 'Nombre común', 'scientific_name' => 'Nombre científico'] as $field => $label)
                                 <div class="mb-4">
                                     <label for="{{ $field }}"
                                         class="form-label fw-semibold text-secondary">{{ $label }}</label>

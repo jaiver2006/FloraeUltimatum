@@ -10,21 +10,12 @@ class plague extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nombre_comun',
+        'plague_name',
         'scientific_name',
         'plague_description',
         'plague_symptom',
         'image_plague_id',
-        'sintoma1',
-        'sintoma2',
-        'sintoma3',
-        'sintoma4',
     ];
-
-    public function symptoms()
-    {
-        return $this->belongsToMany(\App\Models\symptom::class, 'plague_symptoms', 'plague_id', 'symptom_id');
-    }
 
     public function plants()
     {

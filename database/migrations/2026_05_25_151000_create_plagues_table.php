@@ -14,17 +14,12 @@ return new class extends Migration
         Schema::create('plagues', function (Blueprint $table) {
             $table->id();
 
-            $table->string('nombre_comun');
-
+            $table->string('plague_name');
             $table->string('scientific_name');
 
             $table->text('plague_description');
             $table->text('plague_symptom');
 
-            $table->string('sintoma1');
-            $table->string('sintoma2');
-            $table->string('sintoma3');
-            $table->string('sintoma4');
             $table->unsignedBigInteger('image_plague_id')->nullable();
 
             $table->foreign('image_plague_id')

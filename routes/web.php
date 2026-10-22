@@ -92,15 +92,6 @@ Route::get('pestplant/{pest_plant}/edit', [PestPlantController::class, 'edit'])-
 Route::put('pestplant/{pest_plant}', [PestPlantController::class, 'update'])->name('pestplant.update');
 Route::delete('pestplant/{pest_plant}', [PestPlantController::class, 'destroy'])->name('pestplant.destroy');
 
-use App\Http\Controllers\PlagueSymptomController;
-Route::get('plaguesymptom/list', [PlagueSymptomController::class, 'index'])->name('plaguesymptom.index');
-Route::get('plaguesymptom/create', [PlagueSymptomController::class, 'create'])->name('plaguesymptom.create');
-Route::get('plaguesymptom/{plague_symptom}', [PlagueSymptomController::class, 'show'])->name('plaguesymptom.show');
-Route::post('plaguesymptom/store', [PlagueSymptomController::class, 'store'])->name('plaguesymptom.store');
-Route::get('plaguesymptom/{plague_symptom}/edit', [PlagueSymptomController::class, 'edit'])->name('plaguesymptom.edit');
-Route::put('plaguesymptom/{plague_symptom}', [PlagueSymptomController::class, 'update'])->name('plaguesymptom.update');
-Route::delete('plaguesymptom/{plague_symptom}', [PlagueSymptomController::class, 'destroy'])->name('plaguesymptom.destroy');
-
 use App\Http\Controllers\UserController;
 Route::get('user/list', [UserController::class, 'index'])->name('user.index');
 Route::get('user/create', [UserController::class, 'create'])->name('user.create');
@@ -136,16 +127,6 @@ Route::post('imageplague/store', [ImagePlagueController::class, 'store'])->name(
 Route::get('imageplague/{imageplague}/edit', [ImagePlagueController::class, 'edit'])->name('imageplague.edit');
 Route::put('imageplague/{imageplague}', [ImagePlagueController::class, 'update'])->name('imageplague.update');
 Route::delete('imageplague/{imageplague}', [ImagePlagueController::class, 'destroy'])->name('imageplague.destroy');
-
-
-use App\Http\Controllers\SymptomController;
-Route::get('symptom/list', [SymptomController::class, 'index'])->name('symptom.index');
-Route::get('symptom/create', [SymptomController::class, 'create'])->name('symptom.create');
-Route::get('symptom/{symptom}', [SymptomController::class, 'show'])->name('symptom.show');
-Route::post('symptom/store', [SymptomController::class, 'store'])->name('symptom.store');
-Route::get('symptom/{symptom}/edit', [SymptomController::class, 'edit'])->name('symptom.edit');
-Route::put('symptom/{symptom}', [SymptomController::class, 'update'])->name('symptom.update');
-Route::delete('symptom/{symptom}', [SymptomController::class, 'destroy'])->name('symptom.destroy');
 
 
 use App\Http\Controllers\MedicineController;
