@@ -18,33 +18,33 @@
                             <div class="mb-4">
                                 <label for="common_name" class="form-label fw-semibold text-secondary">Nombre común</label>
                                 <input type="text" class="form-control form-control-lg" id="common_name"
-                                    name="common_name" value="{{ old('common_name') }}" required>
+                                    name="common_name" required>
                             </div>
                             @foreach (['common2_name' => 'Segundo nombre común', 'common3_name' => 'Tercer nombre común', 'common4_name' => 'Cuarto nombre común'] as $field => $label)
                                 <div class="mb-4">
                                     <label for="{{ $field }}"
                                         class="form-label fw-semibold text-secondary">{{ $label }}</label>
                                     <input type="text" class="form-control form-control-lg" id="{{ $field }}"
-                                        name="{{ $field }}" value="{{ old($field) }}">
+                                        name="{{ $field }}">
                                 </div>
                             @endforeach
                             <div class="mb-4">
                                 <label for="scientific_name" class="form-label fw-semibold text-secondary">Nombre
                                     científico</label>
                                 <input type="text" class="form-control form-control-lg" id="scientific_name"
-                                    name="scientific_name" value="{{ old('scientific_name') }}" required>
+                                    name="scientific_name" required>
                             </div>
                             <div class="mb-4">
                                 <label for="plant_description"
                                     class="form-label fw-semibold text-secondary">Descripción</label>
-                                <textarea class="form-control" id="plant_description" name="plant_description" rows="4" required>{{ old('plant_description') }}</textarea>
+                                <textarea class="form-control" id="plant_description" name="plant_description" rows="4" required></textarea>
                             </div>
                             @foreach (['origin' => 'Origen', 'type' => 'Tipo', 'size' => 'Tamaño'] as $field => $label)
                                 <div class="mb-4">
                                     <label for="{{ $field }}"
                                         class="form-label fw-semibold text-secondary">{{ $label }}</label>
                                     <input type="text" class="form-control form-control-lg" id="{{ $field }}"
-                                        name="{{ $field }}" value="{{ old($field) }}" required>
+                                        name="{{ $field }}" required>
                                 </div>
                             @endforeach
 
@@ -55,8 +55,7 @@
                                     <option value="">Sin imagen</option>
                                     @foreach ($imagePlants as $imagePlant)
                                         <option value="{{ $imagePlant->id }}"
-                                            data-image-url="{{ Storage::url($imagePlant->image) }}"
-                                            {{ old('image_plant_id') == $imagePlant->id ? 'selected' : '' }}>
+                                            data-image-url="{{ Storage::url($imagePlant->image) }}">
                                             {{ basename($imagePlant->image) }}
                                         </option>
                                     @endforeach

@@ -18,8 +18,7 @@
                                 <select class="form-select form-select-lg" id="care_record_id" name="care_record_id">
                                     <option value="">Sin registro de cuidado</option>
                                     @foreach ($care_records as $care_record)
-                                        <option value="{{ $care_record->id }}"
-                                            {{ old('care_record_id') == $care_record->id ? 'selected' : '' }}>
+                                        <option value="{{ $care_record->id }}">
                                             Registro #{{ $care_record->id }} - {{ $care_record->care_date }}
                                         </option>
                                     @endforeach
@@ -30,8 +29,7 @@
                                 <select class="form-select form-select-lg" id="garden_id" name="garden_id">
                                     <option value="">Sin jardín</option>
                                     @foreach ($gardens as $garden)
-                                        <option value="{{ $garden->id }}"
-                                            {{ old('garden_id') == $garden->id ? 'selected' : '' }}>
+                                        <option value="{{ $garden->id }}">
                                             {{ $garden->plant_classification }} (Jardín #{{ $garden->id }})
                                         </option>
                                     @endforeach

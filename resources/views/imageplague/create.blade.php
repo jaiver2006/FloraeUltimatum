@@ -25,7 +25,7 @@
                                     style="background-color: #008332; border-radius: 0.5rem;">
                                     Enviar formulario
                                 </button>
-                                <a href="{{ route('imageplant.index') }}"
+                                <a href="{{ route('imageplague.index') }}"
                                     class="btn btn-link btn-sm text-secondary text-decoration-none text-center">
                                     Cancelar
                                 </a>

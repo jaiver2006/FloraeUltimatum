@@ -17,19 +17,19 @@
                                     <label for="{{ $field }}"
                                         class="form-label fw-semibold text-secondary">{{ $label }}</label>
                                     <input type="text" class="form-control form-control-lg" id="{{ $field }}"
-                                        name="{{ $field }}" value="{{ old($field) }}" required>
+                                        name="{{ $field }}" required>
                                 </div>
                             @endforeach
 
                             <div class="mb-4">
                                 <label for="plague_description"
                                     class="form-label fw-semibold text-secondary">Descripción</label>
-                                <textarea class="form-control" id="plague_description" name="plague_description" rows="4" required>{{ old('plague_description') }}</textarea>
+                                <textarea class="form-control" id="plague_description" name="plague_description" rows="4" required></textarea>
                             </div>
 
                             <div class="mb-4">
                                 <label for="plague_symptom" class="form-label fw-semibold text-secondary">Síntomas</label>
-                                <textarea class="form-control" id="plague_symptom" name="plague_symptom" rows="4" required>{{ old('plague_symptom') }}</textarea>
+                                <textarea class="form-control" id="plague_symptom" name="plague_symptom" rows="4" required></textarea>
                             </div>
 
                             <div class="mb-4">
@@ -39,8 +39,7 @@
                                     <option value="">Sin imagen</option>
                                     @foreach ($imagePlagues as $imagePlague)
                                         <option value="{{ $imagePlague->id }}"
-                                            data-image-url="{{ Storage::url($imagePlague->image) }}"
-                                            {{ old('image_plague_id') == $imagePlague->id ? 'selected' : '' }}>
+                                            data-image-url="{{ Storage::url($imagePlague->image) }}">
                                             {{ basename($imagePlague->image) }}
                                         </option>
                                     @endforeach

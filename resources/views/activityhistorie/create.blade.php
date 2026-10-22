@@ -14,13 +14,13 @@
                             <div class="mb-4">
                                 <label for="event_description" class="form-label fw-semibold text-secondary">Descripción del
                                     evento</label>
-                                <textarea class="form-control" id="event_description" name="event_description" rows="3" required>{{ old('event_description') }}</textarea>
+                                <textarea class="form-control" id="event_description" name="event_description" rows="3" required></textarea>
                             </div>
                             <div class="mb-4">
                                 <label for="registration_date" class="form-label fw-semibold text-secondary">Fecha de
                                     registro</label>
                                 <input type="date" class="form-control form-control-lg" id="registration_date"
-                                    name="registration_date" value="{{ old('registration_date') }}" required>
+                                    name="registration_date" required>
                             </div>
                             <div class="mb-4">
                                 <label for="garden_plant_id" class="form-label fw-semibold text-secondary">Jardín y

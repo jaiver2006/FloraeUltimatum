@@ -16,30 +16,32 @@
                                 <select class="form-select form-select-lg" id="plant_id" name="plant_id">
                                     <option value="">Sin planta</option>
                                     @foreach ($plants as $plant)
-                                        <option value="{{ $plant->id }}">{{ $plant->common_name }}</option>
+                                        <option value="{{ $plant->id }}">
+                                            {{ $plant->common_name }}
+                                        </option>
                                     @endforeach
                                 </select>
                             </div>
                             <div class="mb-4">
                                 <label for="watering" class="form-label fw-semibold text-secondary">Riego</label>
                                 <input type="text" class="form-control form-control-lg" id="watering" name="watering"
-                                    value="{{ old('watering') }}" required>
+                                    required>
                             </div>
                             <div class="mb-4">
                                 <label for="light" class="form-label fw-semibold text-secondary">Luz</label>
                                 <input type="text" class="form-control form-control-lg" id="light" name="light"
-                                    value="{{ old('light') }}" required>
+                                    required>
                             </div>
                             <div class="mb-4">
                                 <label for="temperature" class="form-label fw-semibold text-secondary">Temperatura</label>
                                 <input type="text" class="form-control form-control-lg" id="temperature"
-                                    name="temperature" value="{{ old('temperature') }}" required>
+                                    name="temperature" required>
                             </div>
                             <div class="mb-4">
                                 <label for="fertilization"
                                     class="form-label fw-semibold text-secondary">Fertilización</label>
                                 <input type="text" class="form-control form-control-lg" id="fertilization"
-                                    name="fertilization" value="{{ old('fertilization') }}" required>
+                                    name="fertilization" required>
                             </div>
                             <div class="d-grid gap-2 mt-5">
                                 <button type="submit" class="btn text-white fw-bold px-4 py-2 fs-5 shadow-sm"

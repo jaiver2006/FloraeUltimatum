@@ -20,8 +20,7 @@
                             <div class="mb-4">
                                 <label for="medicine_type" class="form-label fw-semibold text-secondary">Tipo</label>
                                 <input type="text" class="form-control form-control-lg" id="medicine_type"
-                                    name="medicine_type"
-                                     required>
+                                    name="medicine_type" required>
                             </div>
                             <div class="mb-4">
                                 <label for="medicine_description"

@@ -55,7 +55,9 @@
                                 <select class="form-select form-select-lg" id="garden_id" name="garden_id">
                                     <option value="">Sin jardín</option>
                                     @foreach ($gardens as $garden)
-                                        <option value="{{ $garden->id }}">{{ $garden->plant_classification }}</option>
+                                        <option value="{{ $garden->id }}">
+                                            {{ $garden->plant_classification }}
+                                        </option>
                                     @endforeach
                                 </select>
                             </div>

@@ -15,28 +15,30 @@
                                 <label for="start_date" class="form-label fw-semibold text-secondary">Fecha de
                                     inicio</label>
                                 <input type="date" class="form-control form-control-lg" id="start_date" name="start_date"
-                                    value="{{ old('start_date') }}" required>
+                                    required>
                             </div>
                             <div class="mb-4">
                                 <label for="end_date" class="form-label fw-semibold text-secondary">Fecha final</label>
                                 <input type="date" class="form-control form-control-lg" id="end_date" name="end_date"
-                                    value="{{ old('end_date') }}" required>
+                                    required>
                             </div>
                             <div class="mb-4">
                                 <label for="status" class="form-label fw-semibold text-secondary">Estado</label>
                                 <input type="text" class="form-control form-control-lg" id="status" name="status"
-                                    value="{{ old('status') }}" required>
+                                    required>
                             </div>
                             <div class="mb-4">
                                 <label for="description" class="form-label fw-semibold text-secondary">Descripción</label>
-                                <textarea class="form-control" id="description" name="description" rows="3" required>{{ old('description') }}</textarea>
+                                <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
                             </div>
                             <div class="mb-4">
                                 <label for="plague_id" class="form-label fw-semibold text-secondary">Plaga</label>
                                 <select class="form-select form-select-lg" id="plague_id" name="plague_id">
                                     <option value="">Sin plaga</option>
                                     @foreach ($plagues as $plague)
-                                        <option value="{{ $plague->id }}">{{ $plague->plague_name }}</option>
+                                        <option value="{{ $plague->id }}">
+                                            {{ $plague->plague_name }}
+                                        </option>
                                     @endforeach
                                 </select>
                             </div>

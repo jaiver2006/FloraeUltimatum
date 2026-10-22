@@ -16,7 +16,9 @@
                                 <select class="form-select form-select-lg" id="garden_id" name="garden_id">
                                     <option value="">Sin jardín</option>
                                     @foreach ($gardens as $garden)
-                                        <option value="{{ $garden->id }}">{{ $garden->plant_classification }}</option>
+                                        <option value="{{ $garden->id }}">
+                                            {{ $garden->plant_classification }}
+                                        </option>
                                     @endforeach
                                 </select>
                             </div>
@@ -25,7 +27,9 @@
                                 <select class="form-select form-select-lg" id="plant_id" name="plant_id">
                                     <option value="">Sin planta</option>
                                     @foreach ($plants as $plant)
-                                        <option value="{{ $plant->id }}">{{ $plant->common_name }}</option>
+                                        <option value="{{ $plant->id }}">
+                                            {{ $plant->common_name }}
+                                        </option>
                                     @endforeach
                                 </select>
                             </div>

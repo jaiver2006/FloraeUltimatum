@@ -16,17 +16,19 @@
                                 <select class="form-select form-select-lg" id="plant_id" name="plant_id">
                                     <option value="">Sin planta</option>
                                     @foreach ($plants as $plant)
-                                        <option value="{{ $plant->id }}">{{ $plant->common_name }}</option>
+                                        <option value="{{ $plant->id }}">
+                                            {{ $plant->common_name }}
+                                        </option>
                                     @endforeach
                                 </select>
                             </div>
                             <div class="mb-4">
                                 <label for="warning1" class="form-label fw-semibold text-secondary">Advertencia 1</label>
-                                <textarea class="form-control" id="warning1" name="warning1" rows="3" required>{{ old('warning1') }}</textarea>
+                                <textarea class="form-control" id="warning1" name="warning1" rows="3" required></textarea>
                             </div>
                             <div class="mb-4">
                                 <label for="warning2" class="form-label fw-semibold text-secondary">Advertencia 2</label>
-                                <textarea class="form-control" id="warning2" name="warning2" rows="3">{{ old('warning2') }}</textarea>
+                                <textarea class="form-control" id="warning2" name="warning2" rows="3"></textarea>
                             </div>
                             <div class="d-grid gap-2 mt-5">
                                 <button type="submit" class="btn text-white fw-bold px-4 py-2 fs-5 shadow-sm"
